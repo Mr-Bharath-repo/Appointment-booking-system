@@ -1,0 +1,94 @@
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.calendar-header, .calendar-week-header {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.month-nav {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.calendar-week-header button {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.week-view {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.week-day {
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+    position: relative; 
+}
+
+.day-name {
+    font-weight: bold;
+}
+
+.day-date {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.day-date.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+.week-day.holiday {
+    color: #999;
+    cursor: not-allowed;
+}
+
+.week-day.holiday .day-date {
+    background-color: #f0f0f0;
+    border-color: #ddd;
+}
+
+.week-day[title]::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.week-day:hover[title]::after {
+    opacity: 1;
+    visibility: visible;
+}

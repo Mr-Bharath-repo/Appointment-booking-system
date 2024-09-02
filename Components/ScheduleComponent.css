@@ -1,0 +1,44 @@
+.schedule-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.rooms-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.timeline-section {
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+}
+
+.room-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.room {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; 
+}
+
+.timeline-hour {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
